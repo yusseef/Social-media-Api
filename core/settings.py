@@ -12,6 +12,7 @@ DEBUG = config('DEBUG', cast = bool)
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'users.User'
 
 
 INSTALLED_APPS = [
@@ -24,6 +25,11 @@ INSTALLED_APPS = [
 
     #third_party_apps
     'rest_framework',
+    'phonenumber_field',
+    'django_countries',
+
+    #apps
+    'users',
 ]
 
 MIDDLEWARE = [
