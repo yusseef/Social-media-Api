@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 
     #apps
     'users',
+    'feed',
 ]
 
 MIDDLEWARE = [
@@ -100,5 +101,10 @@ USE_TZ = True
 
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR, 'core/static'),
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
