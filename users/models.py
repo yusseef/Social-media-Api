@@ -94,7 +94,7 @@ class User(AbstractUser):
         verbose_name = _("Street number"),
     )
 
-    country = CountryField(blank_label = _("Country"))
+    country = CountryField(blank_label = _("Country"), blank = True)
 
     birthday = models.DateField(
         null = True,
